@@ -1,0 +1,347 @@
+/*! normalize.css v3.0.3 | Licence MIT | github.com/necolas/normalize.css */
+/**
+ * 1. Définit la famille de police par défaut sur sans-serif.
+ * 2. Empêche l'ajustement de la taille du texte sur iOS et IE après un changement d'orientation de l'appareil,
+ *    sans désactiver le zoom utilisateur.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Supprime la marge par défaut.
+ */
+body {
+  margin: 0;
+}
+/* Définitions d'affichage HTML5
+   ========================================================================== */
+/**
+ * Corrige l'affichage `block` non défini pour tout élément HTML5 dans IE 8/9.
+ * Corrige l'affichage `block` non défini pour `details` ou `summary` dans IE 10/11
+ * et Firefox.
+ * Corrige l'affichage `block` non défini pour `main` dans IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * 1. Corrige l'affichage `inline-block` non défini dans IE 8/9.
+ * 2. Normalise l'alignement vertical de `progress` dans Chrome, Firefox et Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Empêche les navigateurs modernes d'afficher `audio` sans contrôles.
+ * Supprime la hauteur excessive sur les appareils iOS 5.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Traite le style `[hidden]` non présent dans IE 8/9/10.
+ * Cache l'élément `template` dans IE 8/9/10/11, Safari et Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* Liens
+   ========================================================================== */
+/**
+ * Supprime la couleur de fond grise des liens actifs dans IE 10.
+ */
+a {
+  background-color: transparent;
+}
+/**
+ * Améliore la lisibilité des éléments focalisés lorsqu'ils sont également dans un état
+ * actif/survolé.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* Sémantique au niveau du texte
+   ========================================================================== */
+/**
+ * Traite le style non présent dans IE 8/9/10/11, Safari et Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Traite le style défini sur `bolder` dans Firefox 4+, Safari et Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Traite le style non présent dans Safari et Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Traite la taille de police et la marge variables de `h1` dans les contextes `section` et `article`
+ * dans Firefox 4+, Safari et Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
+ * Traite le style non présent dans IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Traite la taille de police incohérente et variable dans tous les navigateurs.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Empêche `sub` et `sup` d'affecter `line-height` dans tous les navigateurs.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Contenu intégré
+   ========================================================================== */
+/**
+ * Supprime la bordure à l'intérieur de l'élément `a` dans IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+/**
+ * Corrige le débordement non masqué dans IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Contenu de regroupement
+   ========================================================================== */
+/**
+ * Traite la marge non présente dans IE 8/9 et Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * Traite les différences entre Firefox et les autres navigateurs.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Contient le débordement dans tous les navigateurs.
+ */
+pre {
+  overflow: auto;
+}
+/**
+ * Traite le rendu étrange de la taille de police en unités `em` dans tous les navigateurs.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+/* Formulaires
+   ========================================================================== */
+/**
+ * Limitation connue : par défaut, Chrome et Safari sur OS X autorisent un style très limité
+ * pour `select`, sauf si une propriété `border` est définie.
+ */
+/**
+ * 1. Corrige la couleur non héritée.
+ *    Problème connu : affecte la couleur des éléments désactivés.
+ * 2. Corrige les propriétés de police non héritées.
+ * 3. Traite les marges définies différemment dans Firefox 4+, Safari et Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Traite le `overflow` défini sur `hidden` dans IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+/**
+ * Traite l'héritage incohérent de `text-transform` pour `button` et `select`.
+ * Tous les autres éléments de contrôle de formulaire n'héritent pas des valeurs `text-transform`.
+ * Corrige l'héritage du style `button` dans Firefox, IE 8/9/10/11 et Opera.
+ * Corrige l'héritage du style `select` dans Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Évite le bug WebKit dans Android 4.0.* où (2) détruit les contrôles natifs `audio`
+ *    et `video`.
+ * 2. Corrige l'incapacité à styliser les types `input` cliquables dans iOS.
+ * 3. Améliore l'utilisabilité et la cohérence du style de curseur entre les `input` de type image
+ *    et les autres.
+ * 4. PERSONNALISÉ POUR WEBFLOW : Suppression du sélecteur input[type="submit"] pour réduire
+ *    la spécificité et se référer au sélecteur .w-button
+ */
+button,
+html input[type="button"],
+
+/**
+ * Réinitialise le curseur par défaut pour les éléments désactivés.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * Supprime le remplissage et la bordure internes dans Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * Traite le réglage de `line-height` par Firefox 4+ sur `input` en utilisant `!important` dans
+ * la feuille de style de l'agent utilisateur.
+ */
+input {
+  line-height: normal;
+}
+/**
+ * Il est recommandé de ne pas tenter de styliser ces éléments.
+ * L'implémentation de Firefox ne respecte pas box-sizing, padding ou width.
+ *
+ * 1. Traite le box sizing défini sur `content-box` dans IE 8/9/10.
+ * 2. Supprime le remplissage excessif dans IE 8/9/10.
+ */
+input[type='checkbox'],
+input[type='radio'] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Corrige le style du curseur pour les boutons d'incrémentation/décrémentation de Chrome. Pour certaines
+ * valeurs de `font-size` de l'`input`, cela provoque le changement du style de curseur du
+ * bouton de décrémentation de `default` à `text`.
+ */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. PERSONNALISÉ POUR WEBFLOW : changé de `textfield` à `none` pour normaliser l'entrée arrondie iOS
+ * 2. PERSONNALISÉ POUR WEBFLOW : la règle box-sizing: content-box a été supprimée
+ *    (similaire à normalize.css >=4.0.0)
+ */
+
+/**
+ * Supprime le remplissage interne et le bouton d'annulation de recherche dans Safari et Chrome sur OS X.
+ * Safari (mais pas Chrome) coupe le bouton d'annulation lorsque l'entrée de recherche a
+ * un remplissage (et une apparence `textfield`).
+ */
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Définit une bordure, une marge et un remplissage cohérents.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Corrige la `color` non héritée dans IE 8/9/10/11.
+ * 2. Supprime le remplissage afin que les gens ne soient pas pris au dépourvu s'ils mettent à zéro les fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Supprime la barre de défilement verticale par défaut dans IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * N'hérite pas du `font-weight` (appliqué par une règle ci-dessus).
+ * REMARQUE : la valeur par défaut ne peut pas être modifiée en toute sécurité dans Chrome et Safari sur OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+/* Tableaux
+   ========================================================================== */
+/**
+ * Supprime la plupart des espacements entre les cellules de tableau.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}

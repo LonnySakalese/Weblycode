@@ -1,0 +1,82 @@
+/* -- PORTFOLIO SECTION -- */
+
+/* Style pour l'ensemble de la carte projet */
+.portfolio-card_link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Positionnement relatif pour l'overlay */
+.image-ratio_3x2 {
+  position: relative;
+  overflow: hidden;
+}
+
+/* L'overlay qui apparaît au survol */
+.portfolio-card_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(4, 6, 15, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Effet de survol sur le lien de la carte */
+.portfolio-card_link:hover .portfolio-card_overlay {
+  opacity: 1;
+}
+
+/* Le bouton dans l'overlay */
+.portfolio-card_overlay .button {
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card_link:hover .portfolio-card_overlay .button {
+  transform: translateY(0);
+}
+
+/* Le conteneur de la carte (classe .card de Webflow) */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation de la carte au survol */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 0 2px var(--ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1757848016813---core-accent-color--accent-primary), 10px 10px 0 var(--ai-gen-82921b10-4b39-48f0-b346-808cf4903d29-1757848016813---core-accent-color--accent-primary) !important;
+}
+
+
+/* -- ANIMATION AU SCROLL -- */
+
+/* Classe pour les éléments à animer au défilement */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Classe ajoutée par JS lorsque l'élément est visible */
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Appliquer un délai progressif aux enfants du grid */
+.grid_3-col > .reveal-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+.grid_3-col > .reveal-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+.grid_3-col > .reveal-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+.grid_3-col > .reveal-on-scroll:nth-child(4) { transition-delay: 0.4s; }
+.grid_3-col > .reveal-on-scroll:nth-child(5) { transition-delay: 0.5s; }
+.grid_3-col > .reveal-on-scroll:nth-child(6) { transition-delay: 0.6s; }
